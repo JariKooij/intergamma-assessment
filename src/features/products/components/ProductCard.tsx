@@ -25,6 +25,7 @@ const ProductCard = ({ product }: IProductCardProps) => {
             width={256}
             alt={`Image of ${product.title}`}
             className="h-auto w-[100px] sm:w-[140px]"
+            loading="lazy"
           />
         </div>
 
