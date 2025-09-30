@@ -6,7 +6,7 @@ import CompanyLogo from "./CompanyLogo";
 const Header = () => {
   return (
     <header className="flex justify-center border-b-2 border-neutral-100">
-      <nav className="max-w-wrapper mx-6 flex w-full justify-between gap-4 py-6 sm:mx-16">
+      <nav className="max-w-wrapper mx-4 flex w-full justify-between gap-4 py-6 sm:mx-16">
         <Link href="/">
           <CompanyLogo />
         </Link>
