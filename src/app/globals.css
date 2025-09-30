@@ -3,4 +3,13 @@
 :root {
     --background: #ffffff;
     --foreground: #171717;
+    --primary: #003878;
+    --secondary: #edf0f2;
+    --max-width: 1200px;
+}
+
+@theme inline {
+    --color-primary: var(--primary);
+    --color-secondary: var(--secondary);
+    --spacing-wrapper: var(--max-width);
 }
