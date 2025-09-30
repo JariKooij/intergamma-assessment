@@ -55,9 +55,7 @@ const SidePanel = ({ children, title, Trigger }: ISidePanelProps) => {
         </div>
 
         {/* Sidepanel body */}
-        <div className="p-4">
-          <div>{children}</div>
-        </div>
+        <div>{children}</div>
       </div>
     </>
   );
