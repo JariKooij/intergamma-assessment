@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useMemo } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { MinusIcon, PlusIcon, XIcon } from "lucide-react";
@@ -13,7 +13,8 @@ interface IWishlistItemCardProps {
 
 const WishlistItemCard = ({ item }: IWishlistItemCardProps) => {
   const { updateWishlist } = useWishlist();
-  const [displayedQuantity, setDisplayedQuantity] = useState(item.quantity);
+
+  const currentQuantity = item.quantity;
 
   const formattedPrice = useMemo(
     () =>
@@ -24,27 +25,19 @@ const WishlistItemCard = ({ item }: IWishlistItemCardProps) => {
     [item.quantity, item.product.price],
   );
 
-  useEffect(() => {
-    updateWishlist(item.product.id, displayedQuantity);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [displayedQuantity, item.product.id]);
-
-  const addToQuantity = () => {
-    setDisplayedQuantity((prev) => prev + 1);
-  };
-
-  const subtractFromQuantity = () => {
-    setDisplayedQuantity((prev) => (prev - 1 >= 0 ? prev - 1 : 0));
+  const changeQuantity = (delta: number) => {
+    const newQuantity = Math.max(0, currentQuantity + delta);
+    updateWishlist(item.product.id, newQuantity);
   };
 
   const removeFromWishlist = () => {
-    setDisplayedQuantity(0);
+    updateWishlist(item.product.id, 0);
   };
 
   return (
     <article
       className={cn("border-secondary flex gap-4 border-b px-2 py-4 sm:px-4", {
-        "pointer-events-none opacity-50": displayedQuantity === 0,
+        "pointer-events-none opacity-50": item.quantity === 0,
       })}
     >
       {/* Product image */}
@@ -81,7 +74,7 @@ const WishlistItemCard = ({ item }: IWishlistItemCardProps) => {
           <div className="flex gap-1 py-2">
             {/* Minus button */}
             <button
-              onClick={subtractFromQuantity}
+              onClick={() => changeQuantity(-1)}
               className="cursor-pointer p-1 hover:opacity-70 disabled:pointer-events-none disabled:opacity-20"
               disabled={!item.quantity}
             >
@@ -89,11 +82,11 @@ const WishlistItemCard = ({ item }: IWishlistItemCardProps) => {
             </button>
 
             {/* Quantity */}
-            <p className="min-w-6 text-center">{displayedQuantity}</p>
+            <p className="min-w-6 text-center">{item.quantity}</p>
 
             {/* Plus button */}
             <button
-              onClick={addToQuantity}
+              onClick={() => changeQuantity(1)}
               className="cursor-pointer p-1 hover:opacity-70"
             >
               <PlusIcon size={16} />
