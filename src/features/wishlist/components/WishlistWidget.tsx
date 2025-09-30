@@ -48,7 +48,7 @@ const WishlistWidget = ({
       className="bg-background border-secondary absolute top-0 -left-1 flex -translate-x-[100%] flex-col gap-2 rounded-md border p-2"
       onClick={(e) => e.preventDefault()}
     >
-      <div className="flex gap-4 py-2">
+      <div className="flex gap-4 px-2 py-2">
         {/* Minus button */}
         <button
           onClick={subtractFromDisplayedQuantity}
@@ -59,7 +59,7 @@ const WishlistWidget = ({
         </button>
 
         {/* Quantity */}
-        <p className="min-w-8 text-center">{displayedQuantity}</p>
+        <p className="min-w-6 text-center">{displayedQuantity}</p>
 
         {/* Plus button */}
         <button
