@@ -25,6 +25,7 @@ const SidePanel = ({ children, title, Trigger }: ISidePanelProps) => {
 
       {/* Overlay */}
       <div
+        data-testid="sidepanel-overlay"
         className={cn(
           "bg-opacity-50 fixed inset-0 z-40 bg-black transition-opacity duration-500",
           {
@@ -37,6 +38,8 @@ const SidePanel = ({ children, title, Trigger }: ISidePanelProps) => {
 
       {/* Sidepanel */}
       <div
+        aria-hidden={!isOpen}
+        data-testid="sidepanel"
         className={cn(
           "bg-background fixed top-0 right-0 z-50 h-full w-[90%] overflow-y-auto transition-transform duration-500 sm:w-100",
           {
@@ -49,7 +52,12 @@ const SidePanel = ({ children, title, Trigger }: ISidePanelProps) => {
         <div className="border-secondary flex items-center justify-between border-b p-4">
           <h2 className="text-primary text-lg font-bold">{title}</h2>
 
-          <Button onClick={closePanel} size="icon" variant="secondary">
+          <Button
+            onClick={closePanel}
+            size="icon"
+            variant="secondary"
+            aria-label="Close panel"
+          >
             <XIcon />
           </Button>
         </div>

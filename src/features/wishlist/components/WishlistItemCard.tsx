@@ -36,7 +36,7 @@ const WishlistItemCard = ({ item }: IWishlistItemCardProps) => {
 
   return (
     <article
-      className={cn("border-secondary flex gap-4 border-b px-2 py-4 sm:px-4", {
+      className={cn("border-secondary flex gap-4 border-b px-4 py-4", {
         "pointer-events-none opacity-50": item.quantity === 0,
       })}
     >

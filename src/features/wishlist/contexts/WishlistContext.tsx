@@ -13,11 +13,7 @@ interface IWishlistContextProps {
   children?: React.ReactNode;
 }
 
-const WishlistContext = createContext<IWishlistContext>({
-  wishlist: [],
-  wishlistLoaded: false,
-  updateWishlist: () => {},
-});
+const WishlistContext = createContext<IWishlistContext | undefined>(undefined);
 
 export const WishlistContextProvider = ({
   children,
