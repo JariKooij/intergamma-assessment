@@ -1,9 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
-import { HeartIcon } from "lucide-react";
 
-import Button from "@/components/ui/Button";
 import { Product } from "../models/product.model";
+import WishlistButton from "@/features/wishlist/components/WishlistButton";
 
 interface IProductCardProps {
   product: Product;
@@ -16,7 +15,7 @@ const ProductCard = ({ product }: IProductCardProps) => {
   }).format(product.price / 100);
 
   return (
-    <article className="border-secondary rounded border">
+    <article className="border-secondary rounded-md border">
       <Link href={"#"} className="flex gap-8 p-4">
         {/* Product image */}
         <div className="shrink-0">
@@ -52,9 +51,7 @@ const ProductCard = ({ product }: IProductCardProps) => {
               {formattedPrice}
             </p>
 
-            <Button variant="secondary" size="icon">
-              <HeartIcon />
-            </Button>
+            <WishlistButton productId={product.id} />
           </div>
         </div>
       </Link>
