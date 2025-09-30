@@ -47,7 +47,7 @@ const SidePanel = ({ children, title, Trigger }: ISidePanelProps) => {
       >
         {/* Sidepanel header */}
         <div className="border-secondary flex items-center justify-between border-b p-4">
-          <h2 className="text-lg font-bold">{title}</h2>
+          <h2 className="text-primary text-lg font-bold">{title}</h2>
 
           <Button onClick={closePanel} size="icon" variant="secondary">
             <XIcon />

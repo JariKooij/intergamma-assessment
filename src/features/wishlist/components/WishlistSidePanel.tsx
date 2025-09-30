@@ -1,12 +1,13 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
-import SidePanel from "@/components/ui/SidePanel";
-import WishlistHeaderIcon from "@/components/layout/header/WishlistHeaderIcon";
 import { loadProducts } from "@/features/products/utils/loadProducts";
 import useWishlist from "../hooks/useWishlist";
-import { DetailedWishlistItem } from "../models/wishlist.model";
+import SidePanel from "@/components/ui/SidePanel";
+import WishlistHeaderIcon from "@/components/layout/header/WishlistHeaderIcon";
+import { DetailedWishlistItem } from "../types/wishlist.types";
+import WishlistItemCard from "./WishlistItemCard";
 
 const WishlistSidePanel = () => {
   const [detailedWishlistItems, setDetailedWishlistItems] = useState<
@@ -15,12 +16,23 @@ const WishlistSidePanel = () => {
 
   const { wishlist } = useWishlist();
 
+  const totalWishlistPrice = useMemo(() => {
+    // Calculate the total cents
+    const totalCents = detailedWishlistItems.reduce(
+      (sum, item) => sum + item.product.price * item.quantity,
+      0,
+    );
+
+    // Format to euros
+    return Intl.NumberFormat("nl-NL", {
+      style: "currency",
+      currency: "EUR",
+    }).format(totalCents / 100);
+  }, [detailedWishlistItems]);
+
   useEffect(() => {
     const getDetailedWishlistItems = async () => {
-      // Create a list of product ids of items in the wishlist
       const productIds = wishlist.map((item) => item.productId);
-
-      // Load these specific products
       const products = await loadProducts(productIds);
 
       // Combine the wishlist-items with their product details
@@ -37,11 +49,21 @@ const WishlistSidePanel = () => {
 
   return (
     <SidePanel title="My Wishlist" Trigger={WishlistHeaderIcon}>
-      {detailedWishlistItems.map((item) => (
-        <div key={item.product.id}>
-          {item.product.title} - {item.quantity}
+      {/* Display total price of wishlist */}
+      <p className="m-4">Total: {totalWishlistPrice}</p>
+
+      {/* Wishlist items */}
+      {detailedWishlistItems.length ? (
+        <div className="flex flex-col gap-4">
+          {detailedWishlistItems.map((item) => (
+            <WishlistItemCard key={item.product.id} item={item} />
+          ))}
         </div>
-      ))}
+      ) : (
+        <p className="p-4 pt-0 text-sm text-neutral-500">
+          Get started by adding items to your wishlist.
+        </p>
+      )}
     </SidePanel>
   );
 };
