@@ -52,7 +52,7 @@ const WishlistWidget = ({
         {/* Minus button */}
         <button
           onClick={subtractFromDisplayedQuantity}
-          className="bg-secondary cursor-pointer rounded-full p-1 hover:opacity-70 disabled:pointer-events-none disabled:opacity-20"
+          className="cursor-pointer p-1 hover:opacity-70 disabled:pointer-events-none disabled:opacity-20"
           disabled={!displayedQuantity}
         >
           <MinusIcon size={16} />
@@ -64,7 +64,7 @@ const WishlistWidget = ({
         {/* Plus button */}
         <button
           onClick={addToDisplayedQuantity}
-          className="bg-secondary cursor-pointer rounded-full p-1 hover:opacity-70"
+          className="cursor-pointer p-1 hover:opacity-70"
         >
           <PlusIcon size={16} />
         </button>
