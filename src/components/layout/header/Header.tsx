@@ -1,9 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { HeartIcon } from "lucide-react";
 
 import CompanyLogo from "./CompanyLogo";
+import WishlistSidePanel from "@/features/wishlist/components/WishlistSidePanel";
 
 const Header = () => {
   return (
@@ -13,13 +13,7 @@ const Header = () => {
           <CompanyLogo />
         </Link>
 
-        <button className="hover:bg-secondary relative cursor-pointer rounded-md p-1 transition-colors">
-          <HeartIcon />
-
-          <span className="bg-primary absolute top-0 -right-1 flex h-4 min-w-4 items-center justify-center rounded-full p-0.5 text-xs text-white">
-            10
-          </span>
-        </button>
+        <WishlistSidePanel />
       </nav>
     </header>
   );

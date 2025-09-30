@@ -52,7 +52,6 @@ export const WishlistContextProvider = ({
   };
 
   const updateWishlist = (productId: number, newQuantity: number) => {
-    console.log(productId, newQuantity);
     const existingItem = wishlist.find((item) => item.productId === productId);
 
     if (newQuantity === 0) {

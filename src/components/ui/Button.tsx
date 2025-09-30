@@ -19,7 +19,7 @@ const Button = ({
         {
           "bg-primary border-primary text-white": variant === "primary",
           "hover:bg-secondary border-secondary": variant === "secondary",
-          "px-2.5": size === "icon",
+          "flex size-10 items-center justify-center px-0": size === "icon",
         },
         className,
       )}
