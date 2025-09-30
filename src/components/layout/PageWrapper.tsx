@@ -7,8 +7,8 @@ interface IPageWrapperProps {
 
 const PageWrapper = ({ children, className }: IPageWrapperProps) => {
   return (
-    <div className={cn("flex justify-center py-6", className)}>
-      <div className="max-w-wrapper mx-4 w-full sm:mx-16">{children}</div>
+    <div className={cn("flex justify-center", className)}>
+      <div className="wrapper-spacing">{children}</div>
     </div>
   );
 };
