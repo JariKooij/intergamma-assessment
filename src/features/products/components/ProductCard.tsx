@@ -1,3 +1,4 @@
+import { useMemo } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -9,10 +10,14 @@ interface IProductCardProps {
 }
 
 const ProductCard = ({ product }: IProductCardProps) => {
-  const formattedPrice = Intl.NumberFormat("nl-NL", {
-    style: "currency",
-    currency: "EUR",
-  }).format(product.price / 100);
+  const formattedPrice = useMemo(
+    () =>
+      Intl.NumberFormat("nl-NL", {
+        style: "currency",
+        currency: "EUR",
+      }).format(product.price / 100),
+    [product.price],
+  );
 
   return (
     <article className="border-secondary rounded-md border">
