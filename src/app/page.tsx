@@ -1,18 +1,8 @@
-import { promises as fs } from "fs";
-
-import { Product } from "@/features/products/models/product.model";
 import ProductsPage from "@/features/products/components/ProductsPage";
-
-const productDataFilePath = "/src/features/products/data/products.json";
+import { loadProducts } from "@/features/products/utils/loadProducts";
 
 const Products = async () => {
-  // Load product data from JSON file
-  const ProductDataJSONFile = await fs.readFile(
-    process.cwd() + productDataFilePath,
-    "utf8",
-  );
-
-  const productData: Product[] = JSON.parse(ProductDataJSONFile);
+  const productData = await loadProducts();
 
   return <ProductsPage products={productData} />;
 };
