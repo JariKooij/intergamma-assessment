@@ -1,0 +1,130 @@
+[
+  {
+    "id": 1,
+    "title": "Cordless Drill 18V",
+    "img": "/images/products/cordless-drill.avif",
+    "price": 8999,
+    "description": "This powerful 18V cordless drill is designed for both professionals and DIY enthusiasts. It comes with two long-lasting lithium-ion batteries and a fast charger for uninterrupted work. The ergonomic grip ensures comfort during extended use, and the 2-speed settings allow for versatile drilling and screwdriving. Ideal for wood, metal, and plastic surfaces.",
+    "attributes": ["2-speed", "color: blue"]
+  },
+  {
+    "id": 2,
+    "title": "Laminate Flooring Oak",
+    "img": "/images/products/laminate-oak.avif",
+    "price": 2499,
+    "description": "Enjoy the look of natural oak with this durable laminate flooring. The click-lock system makes installation quick and easy, even for beginners. Its scratch-resistant surface ensures long-lasting beauty in high-traffic areas. Perfect for living rooms, bedrooms, and hallways.",
+    "attributes": ["1380 x 193 mm", "color: light oak"]
+  },
+  {
+    "id": 3,
+    "title": "Wall Paint Matte White 2.5L",
+    "img": "/images/products/paint-white.avif",
+    "price": 2999,
+    "description": "Transform your walls with this high-coverage matte white paint. Suitable for interior use, it provides a smooth and elegant finish. The low-odor formula makes it ideal for indoor applications without discomfort. Covers up to 25 square meters per can.",
+    "attributes": ["2.5 liters", "color: white"]
+  },
+  {
+    "id": 4,
+    "title": "LED Ceiling Light Round",
+    "img": "/images/products/led-ceiling-light.avif",
+    "price": 4599,
+    "description": "Brighten your home with this modern round LED ceiling light. It emits a warm white glow that creates a cozy atmosphere in any room. The sleek silver finish complements contemporary interiors. Energy-efficient and easy to install.",
+    "attributes": ["\u00d8 30 cm", "color: silver"]
+  },
+  {
+    "id": 5,
+    "title": "Garden Fence Panel Wood",
+    "img": "/images/products/fence-panel.avif",
+    "price": 3999,
+    "description": "Add privacy and style to your garden with this wooden fence panel. Made from pressure-treated pine, it resists weather and insects. The classic design fits seamlessly into any outdoor space. Easy to mount and maintain.",
+    "attributes": ["180 x 180 cm", "material: pine"]
+  },
+  {
+    "id": 6,
+    "title": "Toolbox with Organizer",
+    "img": "/images/products/toolbox.avif",
+    "price": 2299,
+    "description": "Keep your tools organized with this compact toolbox. It features a removable tray and multiple compartments for small parts. The sturdy plastic construction ensures durability and portability. Ideal for home repairs and professional use.",
+    "attributes": ["40 x 20 x 18 cm", "color: black/red"]
+  },
+  {
+    "id": 7,
+    "title": "Radiator Thermostat Smart",
+    "img": "/images/products/smart-thermostat.avif",
+    "price": 5999,
+    "description": "Control your heating remotely with this smart radiator thermostat. Compatible with most systems, it connects via WiFi for easy scheduling. The sleek design blends into any room decor. Save energy and maintain comfort effortlessly.",
+    "attributes": ["WiFi enabled", "color: white"]
+  },
+  {
+    "id": 8,
+    "title": "PVC Floor Tiles Grey",
+    "img": "/images/products/pvc-tiles.avif",
+    "price": 3499,
+    "description": "Upgrade your floors with these water-resistant PVC tiles. Their grey finish adds a modern touch to kitchens and bathrooms. Easy to clean and install, they are perfect for busy households. Durable and slip-resistant for added safety.",
+    "attributes": ["30 x 30 cm", "color: grey"]
+  },
+  {
+    "id": 9,
+    "title": "Interior Door White",
+    "img": "/images/products/interior-door.avif",
+    "price": 11999,
+    "description": "This classic white interior door adds elegance to any room. Made from MDF, it offers a smooth finish and solid construction. Pre-primed for easy painting to match your decor. Ideal for bedrooms, bathrooms, and offices.",
+    "attributes": ["201.5 x 83 cm", "material: MDF"]
+  },
+  {
+    "id": 10,
+    "title": "Electric Sander 200W",
+    "img": "/images/products/sander.avif",
+    "price": 4999,
+    "description": "Smooth surfaces with ease using this 200W electric sander. Its compact design allows for precise control in tight spaces. Suitable for wood, metal, and plastic projects. Includes dust collection for a cleaner workspace.",
+    "attributes": ["200W", "color: green"]
+  },
+  {
+    "id": 11,
+    "title": "Bathroom Mirror Cabinet",
+    "img": "/images/products/mirror-cabinet.avif",
+    "price": 8999,
+    "description": "Combine storage and style with this bathroom mirror cabinet. It features LED lighting for enhanced visibility and a sleek white finish. Inside, adjustable shelves keep toiletries organized. Easy to mount and maintain.",
+    "attributes": ["60 x 70 cm", "color: white"]
+  },
+  {
+    "id": 12,
+    "title": "Smoke Detector Set of 2",
+    "img": "/images/products/smoke-detector.avif",
+    "price": 2599,
+    "description": "Ensure safety with this set of two smoke detectors. Each unit includes a 10-year battery for long-term protection. Certified to EN14604 standards for reliability. Easy to install with included mounting hardware.",
+    "attributes": ["EN14604 certified", "color: white"]
+  },
+  {
+    "id": 13,
+    "title": "Work Gloves Leather",
+    "img": "/images/products/work-gloves.avif",
+    "price": 1299,
+    "description": "Protect your hands during tough jobs with these leather work gloves. Designed for comfort and durability, they resist abrasions and punctures. Ideal for construction, gardening, and mechanical tasks. Available in size L for a secure fit.",
+    "attributes": ["Size: L", "material: leather"]
+  },
+  {
+    "id": 14,
+    "title": "LED Strip Light 5m",
+    "img": "/images/products/led-strip.avif",
+    "price": 1999,
+    "description": "Add ambiance with this 5-meter LED strip light. It includes a remote control for color and brightness adjustments. Flexible and adhesive-backed for easy installation. Perfect for under cabinets, shelves, or behind TVs.",
+    "attributes": ["5 meters", "color: multicolor"]
+  },
+  {
+    "id": 15,
+    "title": "Wall Shelf Set Oak",
+    "img": "/images/products/wall-shelf.avif",
+    "price": 3599,
+    "description": "Display your decor with this set of three oak wall shelves. Each shelf offers a natural wood finish that complements modern interiors. Easy to mount with included hardware. Great for books, plants, and photos.",
+    "attributes": ["40/60/80 cm", "color: natural oak"]
+  },
+  {
+    "id": 16,
+    "title": "Garden Hose 20m",
+    "img": "/images/products/garden-hose.avif",
+    "price": 2899,
+    "description": "Water your garden efficiently with this 20-meter hose. It includes a spray nozzle with adjustable settings for different tasks. Flexible and kink-resistant for hassle-free use. Suitable for all standard outdoor taps.",
+    "attributes": ["20 meters", "color: green"]
+  }
+]
