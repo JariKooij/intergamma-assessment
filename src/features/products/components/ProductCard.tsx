@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import { Product } from "../models/product.model";
+import { Product } from "../types/product.types";
 import WishlistButton from "@/features/wishlist/components/WishlistButton";
 
 interface IProductCardProps {

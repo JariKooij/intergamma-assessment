@@ -1,6 +1,6 @@
 import PageWrapper from "@/components/layout/PageWrapper";
 import ProductCard from "./ProductCard";
-import { Product } from "../models/product.model";
+import { Product } from "../types/product.types";
 
 interface IProductsPageProps {
   products: Product[];

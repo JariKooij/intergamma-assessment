@@ -1,4 +1,4 @@
-import { Product } from "@/features/products/models/product.model";
+import { Product } from "@/features/products/types/product.types";
 
 export interface WishlistItem {
   productId: number;

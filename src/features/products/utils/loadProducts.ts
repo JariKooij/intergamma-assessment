@@ -1,7 +1,5 @@
-"use server";
-
 import products from "@/features/products/data/products.json";
-import { Product } from "../models/product.model";
+import { Product } from "../types/product.types";
 
 /**
  * Load productdata from a JSON file.
