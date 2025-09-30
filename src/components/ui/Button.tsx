@@ -8,6 +8,7 @@ interface IButtonProps extends React.ComponentProps<"button"> {
 const Button = ({
   variant = "primary",
   size = "default",
+  className,
   children,
   ...props
 }: IButtonProps) => {
@@ -20,6 +21,7 @@ const Button = ({
           "hover:bg-secondary border-secondary": variant === "secondary",
           "px-2.5": size === "icon",
         },
+        className,
       )}
       {...props}
     >
