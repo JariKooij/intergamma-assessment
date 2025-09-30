@@ -82,7 +82,7 @@ const WishlistItemCard = ({ item }: IWishlistItemCardProps) => {
             {/* Minus button */}
             <button
               onClick={subtractFromQuantity}
-              className="cursor-pointer rounded-full p-1 hover:opacity-70 disabled:pointer-events-none disabled:opacity-20"
+              className="cursor-pointer p-1 hover:opacity-70 disabled:pointer-events-none disabled:opacity-20"
               disabled={!item.quantity}
             >
               <MinusIcon size={16} />
@@ -94,7 +94,7 @@ const WishlistItemCard = ({ item }: IWishlistItemCardProps) => {
             {/* Plus button */}
             <button
               onClick={addToQuantity}
-              className="cursor-pointer rounded-full p-1 hover:opacity-70"
+              className="cursor-pointer p-1 hover:opacity-70"
             >
               <PlusIcon size={16} />
             </button>
