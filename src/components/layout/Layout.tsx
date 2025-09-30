@@ -1,4 +1,5 @@
-import Header from "./Header";
+import Header from "./header/Header";
+import AppContextProvider from "./AppContextProvider";
 
 interface ILayoutProps {
   children: React.ReactNode;
@@ -6,10 +7,10 @@ interface ILayoutProps {
 
 const Layout = ({ children }: ILayoutProps) => {
   return (
-    <>
+    <AppContextProvider>
       <Header />
       <main>{children}</main>
-    </>
+    </AppContextProvider>
   );
 };
 
