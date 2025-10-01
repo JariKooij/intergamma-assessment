@@ -45,7 +45,7 @@ const WishlistWidget = ({
   return (
     <div
       ref={ref}
-      className="bg-background border-secondary absolute top-0 -left-1 flex -translate-x-[100%] flex-col gap-2 rounded-md border p-2"
+      className="bg-background border-secondary absolute -left-1 flex -translate-x-[100%] flex-col gap-2 rounded-md border p-2 shadow-md max-sm:bottom-0 sm:top-0"
       onClick={(e) => e.preventDefault()}
     >
       <div className="flex gap-4 px-2 py-2">
